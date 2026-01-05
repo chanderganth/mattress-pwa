@@ -1,8 +1,9 @@
-import { defineConfig } from 'vite';
+﻿import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  base: '/mattress-pwa/',
   plugins: [
     react(),
     VitePWA({
@@ -15,11 +16,11 @@ export default defineConfig({
         theme_color: '#0ea5e9',
         background_color: '#ffffff',
         display: 'standalone',
-        start_url: '/',
+        start_url: '/mattress-pwa/',
         icons: [
-          { src: '/icons/pwa-192x192.png', sizes: '192x192', type: 'image/png' },
-          { src: '/icons/pwa-512x512.png', sizes: '512x512', type: 'image/png' },
-          { src: '/icons/pwa-maskable-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' }
+          { src: '/mattress-pwa/icons/pwa-192x192.png', sizes: '192x192', type: 'image/png' },
+          { src: '/mattress-pwa/icons/pwa-512x512.png', sizes: '512x512', type: 'image/png' },
+          { src: '/mattress-pwa/icons/pwa-maskable-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' }
         ]
       }
     })
